@@ -1,5 +1,5 @@
 const asyncHandller = (requestHandler)=>{
-    (re,res,next)=>{
+    return (req,res,next)=>{
         Promise.resolve(requestHandler(req,res,next)).catch((err)=>next(err))
     }
 }
@@ -7,7 +7,7 @@ const asyncHandller = (requestHandler)=>{
 
 export {asyncHandller}
 
-
+//async handler means async function ko handel krta hai 
 
 
 
